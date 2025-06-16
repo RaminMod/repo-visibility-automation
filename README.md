@@ -1,4 +1,4 @@
-# 📦 Automating Repository Visibility on GitHub
+# Automating Repository Visibility on GitHub
 
 Sometimes we want to keep our project private while working on it, and only make it public later — maybe when it's ready, or after a deadline. In this guide, I explain how to **automate the process of changing a private GitHub repository to public** on a specific date using **GitHub Actions**.
 
@@ -6,7 +6,7 @@ I used this method when I was preparing a project for an application and didn’
 
 ---
 
-## 🔄 What This Repository Contains
+## What This Repository Contains
 
 This repo does **not** run the automation itself — it's just a **template and explanation** you can reuse. You’ll find:
 - An example workflow file (`make-public.yml`)
@@ -15,7 +15,7 @@ This repo does **not** run the automation itself — it's just a **template and 
 
 ---
 
-## 🧩 What You’ll Need
+## What You’ll Need
 
 Before you start, make sure:
 - You have a **private repository** you want to make public later
@@ -24,7 +24,7 @@ Before you start, make sure:
 
 ---
 
-## 🪜 Step-by-Step Guide
+## Step-by-Step Guide
 
 ### **Step 1 – Generate a Personal Access Token**
 
@@ -33,7 +33,7 @@ Before you start, make sure:
 3. Give it a name like `repo-public-automation`
 4. Set an expiration date (e.g., 90 days)
 5. Under **Scopes**, only select:  
-   ✅ `repo`
+    `repo`
 6. Click **Generate token** and **copy it immediately** — you won't see it again!
 
 ---
@@ -78,7 +78,7 @@ jobs:
 
 ---
 
-### **Step 4 – That’s It! ✅**
+### **Step 4 – That’s It!**
 
 Once this workflow file is added to your private repo:
 - It will **automatically run on the date you set in the `cron` line**
@@ -89,7 +89,7 @@ This is super helpful when you're preparing for submissions, applications, or si
 
 ---
 
-## ⏰ Customizing the Schedule (CRON)
+## Customizing the Schedule (CRON)
 
 The line below controls **when** the workflow runs:
 
@@ -112,7 +112,7 @@ You can modify the schedule to fit your needs. Here are some examples:
 
 ---
 
-## 💡 A Few Extra Tips
+## A Few Extra Tips
 
 - The workflow uses **GitHub CLI (`gh`)** — no need to install it manually; it's already available in GitHub Actions runners.
 - Make sure your **Personal Access Token (`GH_TOKEN`)** is still active and has the correct `repo` permission.
@@ -130,7 +130,7 @@ REPO_NAME: RaminMod/language-identifier
 
 ---
 
-## 🙋‍♂️ Why I Shared This
+## Why I Shared This
 
 I used this method when I was preparing a project for an application and needed to keep it private until a certain date. Instead of manually making it public later — or risking forgetting it — I decided to automate the process.
 
@@ -148,11 +148,3 @@ It worked really well for me, and I thought it might help others too — especia
 No stress, no reminders — just clean automation.
 
 ---
-
-## 📬 Need Help?
-
-If you’d like help adjusting this for your own project, feel free to fork this repo or open an issue.
-
-Good luck with your projects!
-
-— Ramin Modaresi ✨
