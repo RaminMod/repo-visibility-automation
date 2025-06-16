@@ -77,11 +77,20 @@ jobs:
 
 ---
 
-### **Step 4 – That is it! ✅**
+### **Step 4 – That’s It! ✅**
 
 Once this workflow file is added to your private repo:
-- It will automatically run on the date you set in the cron line
-- The repository will become public without you needing to do anything manually
-- You’ll also have the option to run it anytime using the “Run workflow” button on GitHub
+- It will **automatically run on the date you set in the `cron` line**
+- The repository will become **public without you needing to do anything manually**
+- You’ll also have the option to run it anytime using the **“Run workflow”** button on GitHub
 
 This is super helpful when you're preparing for submissions, applications, or simply want to delay the release until you’re ready.
+
+---
+
+## ⏰ Customizing the Schedule (CRON)
+
+The line below controls **when** the workflow runs:
+
+```yaml
+cron: '0 8 30 6 *'
