@@ -1,0 +1,17 @@
+name: Make Repository Public
+
+on:
+  schedule:
+    - cron: '0 8 30 6 *'  # 8:00 UTC on June 30
+  workflow_dispatch:       # Optional: allow manual trigger
+
+jobs:
+  make-public:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Make the repo public
+        run: gh repo edit $REPO_NAME --visibility=public
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          REPO_NAME: your-username/your-repo-name
