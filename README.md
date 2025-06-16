@@ -75,6 +75,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           REPO_NAME: your-username/your-private-repo
 
+---
+
 ### **Step 4 – That is it! ✅**
 
 Once this workflow file is added to your private repo:
