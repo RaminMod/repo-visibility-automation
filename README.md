@@ -63,7 +63,7 @@ name: Make Repository Public
 on:
   schedule:
     - cron: '0 8 30 6 *'  # This runs at 08:00 UTC on June 30
-  workflow_dispatch:       # Optional: you can also trigger it manually
+#   workflow_dispatch:       # Optional: you can also trigger it manually
 
 jobs:
   make-public:
