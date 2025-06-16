@@ -122,11 +122,8 @@ You can modify the schedule to fit your needs. Here are some examples:
 REPO_NAME: your-username/your-private-repo
 ```
 
-with your actual repository name. Example:
+with your actual repository name.
 
-```yaml
-REPO_NAME: RaminMod/language-identifier
-```
 
 ---
 
