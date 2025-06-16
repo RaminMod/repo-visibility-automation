@@ -74,6 +74,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           REPO_NAME: your-username/your-private-repo
+```
 
 ---
 
@@ -94,3 +95,64 @@ The line below controls **when** the workflow runs:
 
 ```yaml
 cron: '0 8 30 6 *'
+```
+
+This means: **at 08:00 UTC on June 30**.
+
+You can modify the schedule to fit your needs. Here are some examples:
+
+| CRON Expression     | Runs At                    |
+|---------------------|----------------------------|
+| `0 8 30 6 *`        | June 30 at 08:00 UTC       |
+| `0 0 * * 1`         | Every Monday at 00:00 UTC  |
+| `0 12 * * 5`        | Every Friday at 12:00 UTC  |
+| `0 9 * * *`         | Every day at 09:00 UTC     |
+
+🔗 Use [crontab.guru](https://crontab.guru) to test and understand different CRON expressions.
+
+---
+
+## 💡 A Few Extra Tips
+
+- The workflow uses **GitHub CLI (`gh`)** — no need to install it manually; it's already available in GitHub Actions runners.
+- Make sure your **Personal Access Token (`GH_TOKEN`)** is still active and has the correct `repo` permission.
+- Replace the following line:
+
+```yaml
+REPO_NAME: your-username/your-private-repo
+```
+
+with your actual repository name. Example:
+
+```yaml
+REPO_NAME: RaminMod/language-identifier
+```
+
+---
+
+## 🙋‍♂️ Why I Shared This
+
+I used this method when I was preparing a project for an application and needed to keep it private until a certain date. Instead of manually making it public later — or risking forgetting it — I decided to automate the process.
+
+It worked really well for me, and I thought it might help others too — especially students, developers, and researchers managing sensitive or timed releases.
+
+---
+
+## 🧠 Summary
+
+- ✅ Create a Personal Access Token
+- ✅ Save it in your repo as a secret (`GH_TOKEN`)
+- ✅ Add the GitHub Actions workflow
+- 🕒 Let the automation handle the visibility change
+
+No stress, no reminders — just clean automation.
+
+---
+
+## 📬 Need Help?
+
+If you’d like help adjusting this for your own project, feel free to fork this repo or open an issue.
+
+Good luck with your projects!
+
+— Ramin Modaresi ✨
